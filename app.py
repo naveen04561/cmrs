@@ -60,8 +60,9 @@ def rcmd(m):
 app = Flask(__name__)
 
 app.secret_key = "testing"
-client = pymongo.MongoClient("mongodb://localhost:27017/cmrs")
-db = client.get_database('cmrs')
+# client = pymongo.MongoClient("mongodb://localhost:27017/cmrs")
+client = pymongo.MongoClient("mongodb://admin-surendra:aws01surendra@cluster0-shard-00-00.vdoi8.mongodb.net:27017,cluster0-shard-00-01.vdoi8.mongodb.net:27017,cluster0-shard-00-02.vdoi8.mongodb.net:27017/CMRS?ssl=true&replicaSet=atlas-a5j105-shard-0&authSource=admin&retryWrites=true&w=majority")
+db = client.get_database('CMRS')
 records = db.users
 
 @app.route('/')
