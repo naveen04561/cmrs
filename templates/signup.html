@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title> Sign Up </title>
+    <style>
+        .movie {
+          color: #fff;
+          margin-left: auto;
+          margin-right: auto;
+          resize: none;
+        }
+    
+        .btn-block {
+          width: 15%;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          color: #e4e0e0;
+        }
+    
+        #content {
+          /* background-image: url("../static/image.png"); */
+          background-color: #181818
+        }
+        
+        .footer {
+          color: #e4e0e0;
+          text-align: right;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 100%;
+        }
+    
+        h1,h2,h3,h4,p,label {
+          font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          color: #e50914;
+          /* font-weight: bold; */
+          /* margin-top: 30px; */
+        }
+    </style>
+</head>
+
+<body id="content" class="container" style="padding-top: 3%;">
+    {% if message  %}
+    <div class="alert alert-secondary" role="alert">
+        <p>{{ message }}</p>
+    </div>
+    {% endif %}
+    <center>
+        <h1>Movie Recommendation System</h1>
+      </center>
+    <div class="" style="padding: 3% 20%;">
+        <form method="post" action="">
+            <p style="font-size: 2rem"> Enter details to Sign Up </p>
+            <div class="form-group"> <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter full name"> 
+                <span class="help-block" style="color: red; font-size: 12px;">
+                </span>
+            </div>
+            <div class="form-group"> <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter email address"> 
+                <span class="help-block" style="color: red; font-size: 12px;">
+                </span>
+            </div>
+            <div class="form-group"> <label for="password">Password</label> <input type="password" class="form-control" id="password" name="password" placeholder="Enter a password ">
+                <span class="help-block" style="color: red; font-size: 12px;">
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder=" Re-enter the password">
+                    <span class="help-block" style="color: red; font-size: 12px;">
+                    </span>
+            </div>
+            <input type="submit" class="btn btn-secondary" style="width: 100%;" name="sign_up" value="Sign Up"> <br> <br>
+        </form>
+        <form method="get">
+            <p style="text-align: center;"> Have an account?<a href="/login"> Login here</a> .</p>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+
+</html>
